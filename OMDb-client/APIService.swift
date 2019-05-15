@@ -39,8 +39,13 @@ enum APIService {
             DispatchQueue.main.async {
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false
             }
-            print("👌")
-            print(data)
+            guard let data = data else { return }
+            do {
+                let items = try JSONDecoder().decode(OMDbSearch.self, from: data)
+                print(items)
+            } catch {
+                print("😅")
+            }
         }.resume()
     }
 
