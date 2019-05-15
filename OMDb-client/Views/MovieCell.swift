@@ -21,7 +21,7 @@ class MovieCell: UITableViewCell {
         plotLabel.text = item.plot
     }
 
-    func setupPosterFrom(_ image: UIImage) {
+    func setupPosterFrom(_ image: UIImage?) {
         posterImageView.image = image
     }
 

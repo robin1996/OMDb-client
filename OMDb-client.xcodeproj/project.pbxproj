@@ -24,6 +24,7 @@
 		4B62DF47228C9C5100CD8380 /* OMDbItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62DF46228C9C5100CD8380 /* OMDbItem.swift */; };
 		4B62DF49228C9FF600CD8380 /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B62DF48228C9FF600CD8380 /* MovieCell.xib */; };
 		4B62DF4B228CA28D00CD8380 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62DF4A228CA28D00CD8380 /* MovieCell.swift */; };
+		4B62DF4E228CAB2600CD8380 /* PosterOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62DF4D228CAB2600CD8380 /* PosterOperations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		4B62DF46228C9C5100CD8380 /* OMDbItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDbItem.swift; sourceTree = "<group>"; };
 		4B62DF48228C9FF600CD8380 /* MovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCell.xib; sourceTree = "<group>"; };
 		4B62DF4A228CA28D00CD8380 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		4B62DF4D228CAB2600CD8380 /* PosterOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterOperations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 		4B62DF02228C6FE100CD8380 /* OMDb-client */ = {
 			isa = PBXGroup;
 			children = (
+				4B62DF4C228CAAE500CD8380 /* Networking */,
 				4B62DF45228C9C3A00CD8380 /* Models */,
 				4B62DF36228C73F000CD8380 /* Storyboards */,
 				4B62DF35228C73E300CD8380 /* Views */,
@@ -126,7 +129,6 @@
 				4B62DF12228C6FE200CD8380 /* Info.plist */,
 				4B62DF0A228C6FE100CD8380 /* OMDb_client.xcdatamodeld */,
 				4B62DF41228C839D00CD8380 /* Constants.swift */,
-				4B62DF43228C8D3F00CD8380 /* APIService.swift */,
 			);
 			path = "OMDb-client";
 			sourceTree = "<group>";
@@ -193,6 +195,15 @@
 				4B62DF46228C9C5100CD8380 /* OMDbItem.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		4B62DF4C228CAAE500CD8380 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				4B62DF43228C8D3F00CD8380 /* APIService.swift */,
+				4B62DF4D228CAB2600CD8380 /* PosterOperations.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,6 +349,7 @@
 				4B62DF47228C9C5100CD8380 /* OMDbItem.swift in Sources */,
 				4B62DF4B228CA28D00CD8380 /* MovieCell.swift in Sources */,
 				4B62DF3B228C7F1200CD8380 /* MovieListTableViewController.swift in Sources */,
+				4B62DF4E228CAB2600CD8380 /* PosterOperations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

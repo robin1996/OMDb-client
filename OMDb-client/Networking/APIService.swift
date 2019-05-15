@@ -8,6 +8,10 @@
 
 import UIKit
 
+enum APIError: Error {
+    case noData
+}
+
 enum APIService {
 
     private enum ParamKey: String {
@@ -33,18 +37,18 @@ enum APIService {
         return URL(string: urlString)!
     }
 
-    static func performSearch(_ searchString: String) {
+    static func performSearch(_ searchString: String, completion: @escaping ([OMDbItem]?, Error?) -> Void) {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        URLSession.shared.dataTask(with: url([(.search, searchString)])) { (data, _, _) in
+        URLSession.shared.dataTask(with: url([(.search, searchString)])) { (data, _, error) in
             DispatchQueue.main.async {
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false
             }
-            guard let data = data else { return }
+            guard let data = data else { completion(nil, error ?? APIError.noData); return }
             do {
-                let items = try JSONDecoder().decode(OMDbSearch.self, from: data)
-                print(items)
+                let search = try JSONDecoder().decode(OMDbSearch.self, from: data)
+                completion(search.search, error)
             } catch {
-                print("😅")
+                completion(nil, error)
             }
         }.resume()
     }
