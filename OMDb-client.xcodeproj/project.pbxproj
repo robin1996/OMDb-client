@@ -21,6 +21,7 @@
 		4B62DF40228C823C00CD8380 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B62DF3F228C823C00CD8380 /* Search.storyboard */; };
 		4B62DF42228C839D00CD8380 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62DF41228C839D00CD8380 /* Constants.swift */; };
 		4B62DF44228C8D3F00CD8380 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62DF43228C8D3F00CD8380 /* APIService.swift */; };
+		4B62DF47228C9C5100CD8380 /* OMDbItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62DF46228C9C5100CD8380 /* OMDbItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		4B62DF3F228C823C00CD8380 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		4B62DF41228C839D00CD8380 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4B62DF43228C8D3F00CD8380 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		4B62DF46228C9C5100CD8380 /* OMDbItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDbItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 		4B62DF02228C6FE100CD8380 /* OMDb-client */ = {
 			isa = PBXGroup;
 			children = (
+				4B62DF45228C9C3A00CD8380 /* Models */,
 				4B62DF36228C73F000CD8380 /* Storyboards */,
 				4B62DF35228C73E300CD8380 /* Views */,
 				4B62DF34228C73C500CD8380 /* Controllers */,
@@ -176,6 +179,14 @@
 				4B62DF3D228C7F7B00CD8380 /* ResultsNavigationController.swift */,
 			);
 			path = Results;
+			sourceTree = "<group>";
+		};
+		4B62DF45228C9C3A00CD8380 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4B62DF46228C9C5100CD8380 /* OMDbItem.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,6 +328,7 @@
 				4B62DF44228C8D3F00CD8380 /* APIService.swift in Sources */,
 				4B62DF42228C839D00CD8380 /* Constants.swift in Sources */,
 				4B62DF04228C6FE100CD8380 /* AppDelegate.swift in Sources */,
+				4B62DF47228C9C5100CD8380 /* OMDbItem.swift in Sources */,
 				4B62DF3B228C7F1200CD8380 /* MovieListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
