@@ -20,6 +20,7 @@
 		4B62DF3E228C7F7B00CD8380 /* ResultsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62DF3D228C7F7B00CD8380 /* ResultsNavigationController.swift */; };
 		4B62DF40228C823C00CD8380 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B62DF3F228C823C00CD8380 /* Search.storyboard */; };
 		4B62DF42228C839D00CD8380 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62DF41228C839D00CD8380 /* Constants.swift */; };
+		4B62DF44228C8D3F00CD8380 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62DF43228C8D3F00CD8380 /* APIService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		4B62DF3D228C7F7B00CD8380 /* ResultsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsNavigationController.swift; sourceTree = "<group>"; };
 		4B62DF3F228C823C00CD8380 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		4B62DF41228C839D00CD8380 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4B62DF43228C8D3F00CD8380 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				4B62DF12228C6FE200CD8380 /* Info.plist */,
 				4B62DF0A228C6FE100CD8380 /* OMDb_client.xcdatamodeld */,
 				4B62DF41228C839D00CD8380 /* Constants.swift */,
+				4B62DF43228C8D3F00CD8380 /* APIService.swift */,
 			);
 			path = "OMDb-client";
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				4B62DF0C228C6FE100CD8380 /* OMDb_client.xcdatamodeld in Sources */,
 				4B62DF3E228C7F7B00CD8380 /* ResultsNavigationController.swift in Sources */,
 				4B62DF06228C6FE100CD8380 /* RootViewController.swift in Sources */,
+				4B62DF44228C8D3F00CD8380 /* APIService.swift in Sources */,
 				4B62DF42228C839D00CD8380 /* Constants.swift in Sources */,
 				4B62DF04228C6FE100CD8380 /* AppDelegate.swift in Sources */,
 				4B62DF3B228C7F1200CD8380 /* MovieListTableViewController.swift in Sources */,
