@@ -11,3 +11,7 @@ import Foundation
 enum Storyboards {
     static let search = "Search"
 }
+
+enum ReuseIDs {
+    static let movieCell = "MovieCell"
+}
