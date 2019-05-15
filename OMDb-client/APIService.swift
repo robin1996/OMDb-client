@@ -10,13 +10,38 @@ import UIKit
 
 enum APIService {
 
-    private struct Param {
-        let key: String
-        let value: String
+    private enum ParamKey: String {
+        case search = "s"
+        case type   = "type"
+        case plot   = "plot"
+        case year   = "y"
     }
+
+    private typealias Param = (key: ParamKey, value: String)
 
     private static var baseURL: String {
         return Bundle.main.object(forInfoDictionaryKey: "API") as! String
+    }
+
+    private static func url(_ params: [Param]) -> URL {
+        var urlString = baseURL
+        for param in params {
+            urlString.append("&\(param.key.rawValue)=\(param.value)")
+        }
+        // Always get full plot
+        urlString.append("&\(ParamKey.plot.rawValue)=full")
+        return URL(string: urlString)!
+    }
+
+    static func performSearch(_ searchString: String) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        URLSession.shared.dataTask(with: url([(.search, searchString)])) { (data, _, _) in
+            DispatchQueue.main.async {
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            }
+            print("👌")
+            print(data)
+        }.resume()
     }
 
 }

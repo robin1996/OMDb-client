@@ -33,6 +33,7 @@ class RootViewController: UIViewController {
         setupResults()
         setupSearch()
         setMode(to: .results)
+        APIService.performSearch("test")
     }
 
     // MARK: - Actions
