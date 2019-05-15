@@ -15,6 +15,7 @@
 		4B62DF11228C6FE200CD8380 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B62DF0F228C6FE200CD8380 /* LaunchScreen.storyboard */; };
 		4B62DF1C228C6FE200CD8380 /* OMDb_clientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62DF1B228C6FE200CD8380 /* OMDb_clientTests.swift */; };
 		4B62DF27228C6FE200CD8380 /* OMDb_clientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62DF26228C6FE200CD8380 /* OMDb_clientUITests.swift */; };
+		4B62DF39228C744400CD8380 /* MainAppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62DF38228C744400CD8380 /* MainAppButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		4B62DF22228C6FE200CD8380 /* OMDb-clientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OMDb-clientUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B62DF26228C6FE200CD8380 /* OMDb_clientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDb_clientUITests.swift; sourceTree = "<group>"; };
 		4B62DF28228C6FE200CD8380 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B62DF38228C744400CD8380 /* MainAppButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,11 +101,11 @@
 		4B62DF02228C6FE100CD8380 /* OMDb-client */ = {
 			isa = PBXGroup;
 			children = (
+				4B62DF36228C73F000CD8380 /* Storyboards */,
+				4B62DF35228C73E300CD8380 /* Views */,
+				4B62DF34228C73C500CD8380 /* Controllers */,
 				4B62DF03228C6FE100CD8380 /* AppDelegate.swift */,
-				4B62DF05228C6FE100CD8380 /* RootViewController.swift */,
-				4B62DF07228C6FE100CD8380 /* Main.storyboard */,
 				4B62DF0D228C6FE200CD8380 /* Assets.xcassets */,
-				4B62DF0F228C6FE200CD8380 /* LaunchScreen.storyboard */,
 				4B62DF12228C6FE200CD8380 /* Info.plist */,
 				4B62DF0A228C6FE100CD8380 /* OMDb_client.xcdatamodeld */,
 			);
@@ -126,6 +128,31 @@
 				4B62DF28228C6FE200CD8380 /* Info.plist */,
 			);
 			path = "OMDb-clientUITests";
+			sourceTree = "<group>";
+		};
+		4B62DF34228C73C500CD8380 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4B62DF05228C6FE100CD8380 /* RootViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4B62DF35228C73E300CD8380 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4B62DF38228C744400CD8380 /* MainAppButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4B62DF36228C73F000CD8380 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				4B62DF07228C6FE100CD8380 /* Main.storyboard */,
+				4B62DF0F228C6FE200CD8380 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B62DF39228C744400CD8380 /* MainAppButton.swift in Sources */,
 				4B62DF0C228C6FE100CD8380 /* OMDb_client.xcdatamodeld in Sources */,
 				4B62DF06228C6FE100CD8380 /* RootViewController.swift in Sources */,
 				4B62DF04228C6FE100CD8380 /* AppDelegate.swift in Sources */,
