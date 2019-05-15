@@ -10,7 +10,16 @@ import UIKit
 
 class RootViewController: UIViewController {
 
+    enum Mode {
+        case results
+        case search
+    }
+
     // MARK: - Members
+
+    var mode: Mode = .results
+    weak var resultsNavigationController: ResultsNavigationController?
+    weak var searchViewController: UIViewController?
 
     // MARK: Outlets
 
@@ -22,14 +31,14 @@ class RootViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupResults()
+        setupSearch()
+        setMode(to: .results)
     }
 
     // MARK: - Actions
 
     @IBAction func appModeButtonPress(_ sender: Any) {
-        UIView.transition(with: appModeButton, duration: 0.3, options: .transitionFlipFromTop, animations: {
-            self.appModeButton.toggle()
-        }, completion: nil)
+        toggleMode()
     }
 
     // MARK: - Helper
@@ -39,13 +48,60 @@ class RootViewController: UIViewController {
         let nc = ResultsNavigationController(rootViewController: vc)
         addChild(nc)
         nc.didMove(toParent: self)
+        resultsNavigationController = nc
+    }
 
-        contentView.addSubview(nc.view)
-        nc.view.translatesAutoresizingMaskIntoConstraints = false
-        nc.view.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
-        nc.view.leftAnchor.constraint(equalTo: contentView.leftAnchor).isActive = true
-        nc.view.rightAnchor.constraint(equalTo: contentView.rightAnchor).isActive = true
-        nc.view.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
+    func setupSearch() {
+        guard let vc = UIStoryboard(name: Storyboards.search, bundle: nil)
+            .instantiateInitialViewController() else { fatalError() }
+        addChild(vc)
+        vc.didMove(toParent: self)
+        searchViewController = vc
+    }
+
+    func setMode(to mode: Mode) {
+        var oldView: UIView?
+        var newView: UIView?
+        switch mode {
+        case .results:
+            setMainAppButton(to: .searchButton)
+            oldView = searchViewController?.view
+            newView = resultsNavigationController?.view
+            self.mode = .results
+        case .search:
+            setMainAppButton(to: .exitButton)
+            oldView = resultsNavigationController?.view
+            newView = searchViewController?.view
+            self.mode = .search
+        }
+        UIView.transition(with: contentView, duration: 0.3, options: .transitionCrossDissolve, animations: {
+            if let oldView = oldView { oldView.removeFromSuperview() }
+            if let newView = newView { self.addViewToContentsView(view: newView) }
+        }, completion: nil)
+    }
+
+    func toggleMode() {
+        switch mode {
+        case .results:
+            setMode(to: .search)
+        case .search:
+            setMode(to: .results)
+        }
+    }
+
+    func setMainAppButton(to mode: MainAppButton.Mode) {
+        UIView.transition(with: appModeButton, duration: 0.3, options: .transitionFlipFromTop, animations: {
+            self.appModeButton.mode = mode
+        }, completion: nil)
+    }
+
+    func addViewToContentsView(view: UIView) {
+        contentView.addSubview(view)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
+        view.leftAnchor.constraint(equalTo: contentView.leftAnchor).isActive = true
+        view.rightAnchor.constraint(equalTo: contentView.rightAnchor).isActive = true
+        view.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
     }
 
 }

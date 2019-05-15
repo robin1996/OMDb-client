@@ -49,15 +49,4 @@ class MainAppButton: UIButton {
         mode = .searchButton
     }
 
-    // MARK: - Helpers
-
-    func toggle() {
-        switch mode {
-        case .exitButton:
-            mode = .searchButton
-        case .searchButton:
-            mode = .exitButton
-        }
-    }
-
 }
