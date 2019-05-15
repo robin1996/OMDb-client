@@ -29,9 +29,15 @@ enum PosterCache {
 
 class PosterRecord {
 
+    enum DownloadState {
+        case start
+        case done
+        case error
+    }
+
     var image: UIImage?
     var address: String
-    var hasDownloaded = false
+    var downloadState: DownloadState = .start
 
     init(address: String) {
         self.address = address
@@ -61,11 +67,15 @@ class PosterDownloadOperation: Operation {
     override func main() {
         if isCancelled { return }
         guard let url = URL(string: record.address), !isCancelled else { return }
-        guard let imageData = try? Data(contentsOf: url), !isCancelled else { return }
-        guard !imageData.isEmpty && !isCancelled else { return }
-        record.image = UIImage(data: imageData)
-        if isCancelled { return }
-        record.hasDownloaded = true
+        do {
+            let imageData = try Data(contentsOf: url)
+            guard !imageData.isEmpty && !isCancelled else { return }
+            record.image = UIImage(data: imageData)
+            if isCancelled { return }
+            record.downloadState = .done
+        } catch {
+            record.downloadState = .error
+        }
     }
 
 }

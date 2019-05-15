@@ -10,20 +10,54 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Search View Controller-->
         <scene sceneID="Wyg-Ws-Z6U">
             <objects>
-                <viewController id="ac9-Gd-aE5" sceneMemberID="viewController">
+                <viewController id="ac9-Gd-aE5" customClass="SearchViewController" customModule="OMDb_client" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hDc-AB-hHE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="av2-bl-ns2">
+                                <rect key="frame" x="20" y="74" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="lVk-4f-uho"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTA-io-EQl">
+                                <rect key="frame" x="157" y="134" width="100" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="691-ZE-Kr0"/>
+                                    <constraint firstAttribute="width" constant="100" id="GhB-8g-bMN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <state key="normal" title="Search"/>
+                                <connections>
+                                    <action selector="searchButtonPress:" destination="ac9-Gd-aE5" eventType="touchUpInside" id="7BD-N8-DsD"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cG9-LO-NaW" firstAttribute="trailing" secondItem="av2-bl-ns2" secondAttribute="trailing" constant="20" id="5Qs-bq-016"/>
+                            <constraint firstItem="bTA-io-EQl" firstAttribute="centerX" secondItem="cG9-LO-NaW" secondAttribute="centerX" id="SKT-nZ-B0u"/>
+                            <constraint firstItem="bTA-io-EQl" firstAttribute="top" secondItem="av2-bl-ns2" secondAttribute="bottom" constant="20" id="UH2-fz-cOo"/>
+                            <constraint firstItem="av2-bl-ns2" firstAttribute="top" secondItem="cG9-LO-NaW" secondAttribute="top" constant="30" id="flj-sh-GSy"/>
+                            <constraint firstItem="av2-bl-ns2" firstAttribute="leading" secondItem="cG9-LO-NaW" secondAttribute="leading" constant="20" id="xzc-96-Eia"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="cG9-LO-NaW"/>
                     </view>
+                    <connections>
+                        <outlet property="searchButton" destination="bTA-io-EQl" id="Onv-mb-185"/>
+                        <outlet property="titleField" destination="av2-bl-ns2" id="XKM-Z6-whK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5jh-JH-moA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-244" y="2"/>
+            <point key="canvasLocation" x="-244.92753623188409" y="1.3392857142857142"/>
         </scene>
     </scenes>
 </document>

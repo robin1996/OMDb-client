@@ -59,9 +59,12 @@ class RootViewController: UIViewController {
 
     func setupSearch() {
         guard let vc = UIStoryboard(name: Storyboards.search, bundle: nil)
-            .instantiateInitialViewController() else { fatalError() }
+            .instantiateInitialViewController() as? SearchViewController else {
+                fatalError()
+        }
         addChild(vc)
         vc.didMove(toParent: self)
+        vc.delegate = self
         searchViewController = vc
     }
 
@@ -116,6 +119,7 @@ extension RootViewController: SearchDelegate {
 
     func search(for searchString: String) {
         searchDelegate?.search(for: searchString)
+        setMode(to: .results)
     }
 
 }

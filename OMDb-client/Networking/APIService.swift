@@ -39,7 +39,9 @@ enum APIService {
 
     static func performSearch(_ searchString: String, completion: @escaping ([OMDbItem]?, Error?) -> Void) {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        URLSession.shared.dataTask(with: url([(.search, searchString)])) { (data, _, error) in
+        URLSession.shared.dataTask(with: url(
+            [(.search, searchString.replacingOccurrences(of: " ", with: ""))]
+        )) { (data, _, error) in
             DispatchQueue.main.async {
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false
             }

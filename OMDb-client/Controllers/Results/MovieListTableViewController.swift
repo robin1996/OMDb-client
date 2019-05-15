@@ -58,7 +58,7 @@ extension MovieListTableViewController {
     func getPoster(for indexPath: IndexPath) {
         guard operations.downloadsInProgress[indexPath] == nil else { return }
         guard let record = posterRecords[indexPath.row] else { return }
-        guard !record.hasDownloaded else { return }
+        guard record.downloadState == .start else { return }
 
         let operation = PosterDownloadOperation(record)
         operation.completionBlock = { [weak self] in
@@ -88,7 +88,7 @@ extension MovieListTableViewController: UITableViewDataSourcePrefetching {
 extension MovieListTableViewController: SearchDelegate {
 
     func search(for searchString: String) {
-        APIService.performSearch("test") { [weak self] (items, _) in
+        APIService.performSearch(searchString) { [weak self] (items, _) in
             if let items = items {
                 self?.items = items
                 DispatchQueue.main.async {

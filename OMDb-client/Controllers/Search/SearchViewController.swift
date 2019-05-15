@@ -14,4 +14,15 @@ class SearchViewController: UIViewController {
 
     weak var delegate: SearchDelegate?
 
+    // MARK: Outlet
+
+    @IBOutlet var searchButton: UIButton!
+    @IBOutlet var titleField: UITextField!
+
+    // MARK: - Actions
+
+    @IBAction func searchButtonPress(_ sender: Any) {
+        delegate?.search(for: titleField.text ?? "")
+    }
+
 }
