@@ -81,3 +81,14 @@ extension MovieListTableViewController {
     }
 
 }
+
+// MARK: - Prefetching posters
+extension MovieListTableViewController: UITableViewDataSourcePrefetching {
+
+    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+        for path in indexPaths {
+            getPoster(for: path)
+        }
+    }
+
+}
