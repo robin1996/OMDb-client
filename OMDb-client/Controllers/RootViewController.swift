@@ -21,7 +21,7 @@ class RootViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        setupResults()
     }
 
     // MARK: - Actions
@@ -30,6 +30,22 @@ class RootViewController: UIViewController {
         UIView.transition(with: appModeButton, duration: 0.3, options: .transitionFlipFromTop, animations: {
             self.appModeButton.toggle()
         }, completion: nil)
+    }
+
+    // MARK: - Helper
+
+    func setupResults() {
+        let vc = MovieListTableViewController()
+        let nc = ResultsNavigationController(rootViewController: vc)
+        addChild(nc)
+        nc.didMove(toParent: self)
+
+        contentView.addSubview(nc.view)
+        nc.view.translatesAutoresizingMaskIntoConstraints = false
+        nc.view.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
+        nc.view.leftAnchor.constraint(equalTo: contentView.leftAnchor).isActive = true
+        nc.view.rightAnchor.constraint(equalTo: contentView.rightAnchor).isActive = true
+        nc.view.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
     }
 
 }

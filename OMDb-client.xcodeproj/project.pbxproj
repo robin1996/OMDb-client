@@ -16,6 +16,8 @@
 		4B62DF1C228C6FE200CD8380 /* OMDb_clientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62DF1B228C6FE200CD8380 /* OMDb_clientTests.swift */; };
 		4B62DF27228C6FE200CD8380 /* OMDb_clientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62DF26228C6FE200CD8380 /* OMDb_clientUITests.swift */; };
 		4B62DF39228C744400CD8380 /* MainAppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62DF38228C744400CD8380 /* MainAppButton.swift */; };
+		4B62DF3B228C7F1200CD8380 /* MovieListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62DF3A228C7F1200CD8380 /* MovieListTableViewController.swift */; };
+		4B62DF3E228C7F7B00CD8380 /* ResultsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62DF3D228C7F7B00CD8380 /* ResultsNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		4B62DF26228C6FE200CD8380 /* OMDb_clientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDb_clientUITests.swift; sourceTree = "<group>"; };
 		4B62DF28228C6FE200CD8380 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B62DF38228C744400CD8380 /* MainAppButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppButton.swift; sourceTree = "<group>"; };
+		4B62DF3A228C7F1200CD8380 /* MovieListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListTableViewController.swift; sourceTree = "<group>"; };
+		4B62DF3D228C7F7B00CD8380 /* ResultsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +137,7 @@
 		4B62DF34228C73C500CD8380 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4B62DF3C228C7F4B00CD8380 /* Results */,
 				4B62DF05228C6FE100CD8380 /* RootViewController.swift */,
 			);
 			path = Controllers;
@@ -153,6 +158,15 @@
 				4B62DF0F228C6FE200CD8380 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		4B62DF3C228C7F4B00CD8380 /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				4B62DF3A228C7F1200CD8380 /* MovieListTableViewController.swift */,
+				4B62DF3D228C7F7B00CD8380 /* ResultsNavigationController.swift */,
+			);
+			path = Results;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,8 +302,10 @@
 			files = (
 				4B62DF39228C744400CD8380 /* MainAppButton.swift in Sources */,
 				4B62DF0C228C6FE100CD8380 /* OMDb_client.xcdatamodeld in Sources */,
+				4B62DF3E228C7F7B00CD8380 /* ResultsNavigationController.swift in Sources */,
 				4B62DF06228C6FE100CD8380 /* RootViewController.swift in Sources */,
 				4B62DF04228C6FE100CD8380 /* AppDelegate.swift in Sources */,
+				4B62DF3B228C7F1200CD8380 /* MovieListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

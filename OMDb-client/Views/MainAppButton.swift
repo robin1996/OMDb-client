@@ -40,11 +40,12 @@ class MainAppButton: UIButton {
         generalSetup()
     }
 
-    func generalSetup() {
+    private func generalSetup() {
         setTitle(nil, for: .normal)
         layer.cornerRadius = 30
         layer.borderWidth = 1
         layer.borderColor = tintColor.cgColor
+        backgroundColor = .white
         mode = .searchButton
     }
 
