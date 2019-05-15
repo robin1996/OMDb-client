@@ -25,6 +25,7 @@
 		4B62DF49228C9FF600CD8380 /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B62DF48228C9FF600CD8380 /* MovieCell.xib */; };
 		4B62DF4B228CA28D00CD8380 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62DF4A228CA28D00CD8380 /* MovieCell.swift */; };
 		4B62DF4E228CAB2600CD8380 /* PosterOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62DF4D228CAB2600CD8380 /* PosterOperations.swift */; };
+		4B62DF51228CB1F500CD8380 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62DF50228CB1F500CD8380 /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		4B62DF48228C9FF600CD8380 /* MovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCell.xib; sourceTree = "<group>"; };
 		4B62DF4A228CA28D00CD8380 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		4B62DF4D228CAB2600CD8380 /* PosterOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterOperations.swift; sourceTree = "<group>"; };
+		4B62DF50228CB1F500CD8380 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 		4B62DF34228C73C500CD8380 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4B62DF4F228CB1DF00CD8380 /* Search */,
 				4B62DF3C228C7F4B00CD8380 /* Results */,
 				4B62DF05228C6FE100CD8380 /* RootViewController.swift */,
 			);
@@ -204,6 +207,14 @@
 				4B62DF4D228CAB2600CD8380 /* PosterOperations.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		4B62DF4F228CB1DF00CD8380 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				4B62DF50228CB1F500CD8380 /* SearchViewController.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,6 +356,7 @@
 				4B62DF06228C6FE100CD8380 /* RootViewController.swift in Sources */,
 				4B62DF44228C8D3F00CD8380 /* APIService.swift in Sources */,
 				4B62DF42228C839D00CD8380 /* Constants.swift in Sources */,
+				4B62DF51228CB1F500CD8380 /* SearchViewController.swift in Sources */,
 				4B62DF04228C6FE100CD8380 /* AppDelegate.swift in Sources */,
 				4B62DF47228C9C5100CD8380 /* OMDbItem.swift in Sources */,
 				4B62DF4B228CA28D00CD8380 /* MovieCell.swift in Sources */,

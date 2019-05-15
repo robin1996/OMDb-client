@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol SearchDelegate: AnyObject {
+    func search(for searchString: String)
+}
+
 class RootViewController: UIViewController {
 
     enum Mode {
@@ -20,6 +24,7 @@ class RootViewController: UIViewController {
     var mode: Mode = .results
     weak var resultsNavigationController: ResultsNavigationController?
     weak var searchViewController: UIViewController?
+    weak var searchDelegate: SearchDelegate?
 
     // MARK: Outlets
 
@@ -49,6 +54,7 @@ class RootViewController: UIViewController {
         addChild(nc)
         nc.didMove(toParent: self)
         resultsNavigationController = nc
+        searchDelegate = vc
     }
 
     func setupSearch() {
@@ -102,6 +108,14 @@ class RootViewController: UIViewController {
         view.leftAnchor.constraint(equalTo: contentView.leftAnchor).isActive = true
         view.rightAnchor.constraint(equalTo: contentView.rightAnchor).isActive = true
         view.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
+    }
+
+}
+
+extension RootViewController: SearchDelegate {
+
+    func search(for searchString: String) {
+        searchDelegate?.search(for: searchString)
     }
 
 }

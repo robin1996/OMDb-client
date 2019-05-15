@@ -28,14 +28,6 @@ class MovieListTableViewController: UITableViewController {
         super.viewDidLoad()
         tableView.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         tableView.register(UINib(nibName: XIBNames.movieCell, bundle: nil), forCellReuseIdentifier: ReuseIDs.movieCell)
-        APIService.performSearch("test") { [weak self] (items, _) in
-            if let items = items {
-                self?.items = items
-                DispatchQueue.main.async {
-                    self?.tableView.reloadData()
-                }
-            }
-        }
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -88,6 +80,21 @@ extension MovieListTableViewController: UITableViewDataSourcePrefetching {
     func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
         for path in indexPaths {
             getPoster(for: path)
+        }
+    }
+
+}
+
+extension MovieListTableViewController: SearchDelegate {
+
+    func search(for searchString: String) {
+        APIService.performSearch("test") { [weak self] (items, _) in
+            if let items = items {
+                self?.items = items
+                DispatchQueue.main.async {
+                    self?.tableView.reloadData()
+                }
+            }
         }
     }
 
