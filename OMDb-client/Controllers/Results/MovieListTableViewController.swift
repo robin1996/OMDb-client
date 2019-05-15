@@ -10,12 +10,25 @@ import UIKit
 
 class MovieListTableViewController: UITableViewController {
 
+    var items: [OMDbItem] = []
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.register(UINib(nibName: XIBNames.movieCell, bundle: nil), forCellReuseIdentifier: ReuseIDs.movieCell)
+    }
+
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return items.count
+    }
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: ReuseIDs.movieCell) as! MovieCell
+        cell.setupDescriptionFrom(items[indexPath.row])
+        return cell
     }
 
 }
