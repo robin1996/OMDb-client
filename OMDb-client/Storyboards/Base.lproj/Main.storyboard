@@ -29,6 +29,9 @@
                                     <constraint firstAttribute="height" constant="60" id="yp5-az-jA6"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="appModeButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dDX-54-q9V"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

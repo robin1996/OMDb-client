@@ -10,14 +10,26 @@ import UIKit
 
 class RootViewController: UIViewController {
 
+    // MARK: - Members
+
+    // MARK: Outlets
+
     @IBOutlet var contentView: UIView!
-    @IBOutlet var appModeButton: UIButton!
-    
+    @IBOutlet var appModeButton: MainAppButton!
+
+    // MARK: - Life cycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
+    // MARK: - Actions
+
+    @IBAction func appModeButtonPress(_ sender: Any) {
+        UIView.transition(with: appModeButton, duration: 0.3, options: .transitionFlipFromTop, animations: {
+            self.appModeButton.toggle()
+        }, completion: nil)
+    }
 
 }
-
