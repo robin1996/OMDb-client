@@ -8,8 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class RootViewController: UIViewController {
 
+    @IBOutlet var contentView: UIView!
+    @IBOutlet var appModeButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

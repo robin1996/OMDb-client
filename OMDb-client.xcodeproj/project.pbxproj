@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4B62DF04228C6FE100CD8380 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62DF03228C6FE100CD8380 /* AppDelegate.swift */; };
-		4B62DF06228C6FE100CD8380 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62DF05228C6FE100CD8380 /* ViewController.swift */; };
+		4B62DF06228C6FE100CD8380 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62DF05228C6FE100CD8380 /* RootViewController.swift */; };
 		4B62DF09228C6FE100CD8380 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B62DF07228C6FE100CD8380 /* Main.storyboard */; };
 		4B62DF0C228C6FE100CD8380 /* OMDb_client.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4B62DF0A228C6FE100CD8380 /* OMDb_client.xcdatamodeld */; };
 		4B62DF0E228C6FE200CD8380 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B62DF0D228C6FE200CD8380 /* Assets.xcassets */; };
@@ -37,7 +37,7 @@
 /* Begin PBXFileReference section */
 		4B62DF00228C6FE100CD8380 /* OMDb-client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OMDb-client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B62DF03228C6FE100CD8380 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4B62DF05228C6FE100CD8380 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4B62DF05228C6FE100CD8380 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		4B62DF08228C6FE100CD8380 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4B62DF0B228C6FE100CD8380 /* OMDb_client.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OMDb_client.xcdatamodel; sourceTree = "<group>"; };
 		4B62DF0D228C6FE200CD8380 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				4B62DF03228C6FE100CD8380 /* AppDelegate.swift */,
-				4B62DF05228C6FE100CD8380 /* ViewController.swift */,
+				4B62DF05228C6FE100CD8380 /* RootViewController.swift */,
 				4B62DF07228C6FE100CD8380 /* Main.storyboard */,
 				4B62DF0D228C6FE200CD8380 /* Assets.xcassets */,
 				4B62DF0F228C6FE200CD8380 /* LaunchScreen.storyboard */,
@@ -260,7 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B62DF0C228C6FE100CD8380 /* OMDb_client.xcdatamodeld in Sources */,
-				4B62DF06228C6FE100CD8380 /* ViewController.swift in Sources */,
+				4B62DF06228C6FE100CD8380 /* RootViewController.swift in Sources */,
 				4B62DF04228C6FE100CD8380 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
