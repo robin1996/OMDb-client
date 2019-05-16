@@ -36,7 +36,10 @@ class RootViewController: UIViewController {
         super.viewDidLoad()
         setupResults()
         setupSearch()
-        setMode(to: .results)
+        setMode(to: .search)
+
+        // Hidden until the user makes a search
+        appModeButton.isHidden = true
     }
 
     // MARK: - Actions
@@ -118,6 +121,9 @@ extension RootViewController: SearchDelegate {
     func search(for search: Search) {
         resultsViewController?.search(for: search)
         setMode(to: .results)
+
+        // Revieling main button
+        appModeButton.isHidden = false
     }
 
 }

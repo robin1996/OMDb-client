@@ -66,7 +66,15 @@ class SearchViewController: UIViewController {
         newSearch.setValue(search.title, forKeyPath: "title")
         newSearch.setValue(search.year, forKeyPath: "year")
         newSearch.setValue(search.type?.rawValue, forKeyPath: "type")
-        try? context.save()
+        do {
+            try context.save()
+        } catch {
+            present(UIAlertController(
+                error: error,
+                message: "Couldn't save search to history.",
+                dismissCompletion: nil
+            ), animated: true, completion: nil)
+        }
     }
 
 }

@@ -7,6 +7,8 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>IMDbAddress</key>
+	<string>https://www.imdb.com/title/</string>
 	<key>API</key>
 	<string>https://www.omdbapi.com/?apikey=4359bcbe</string>
 	<key>CFBundleDevelopmentRegion</key>

@@ -27,6 +27,18 @@ enum APIService {
         return Bundle.main.object(forInfoDictionaryKey: "API") as! String
     }
 
+    private static var imdbURL: String {
+        return Bundle.main.object(forInfoDictionaryKey: "IMDbAddress") as! String
+    }
+
+    static func openInSafari(_ item: OMDbItem, completion: ((Bool) -> Void)? = nil) {
+        UIApplication.shared.open(
+            URL(string: "\(imdbURL)\(item.id)")!,
+            options: [:],
+            completionHandler: completion
+        )
+    }
+
     private static func url(_ params: [Param]) -> URL {
         var urlString = baseURL
         for param in params {
@@ -37,7 +49,7 @@ enum APIService {
 
     private static func url(_ search: Search) -> URL {
         var params: [Param] = []
-        if let title = search.title {
+        if let title = search.title?.replacingOccurrences(of: " ", with: "") {
             params.append((.search, title))
         }
         if let year = search.year {

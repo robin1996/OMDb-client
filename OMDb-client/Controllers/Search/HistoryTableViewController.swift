@@ -11,7 +11,7 @@ import CoreData
 
 class HistoryTableViewController: UITableViewController {
 
-    var pastSearches: [Search] = []
+    var pastSearches: [NSManagedObject] = []
     weak var delegate: SearchDelegate?
 
     override func viewDidLoad() {
@@ -34,7 +34,7 @@ class HistoryTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ReuseIDs.searchHistoryCell, for: indexPath)
-        let search = pastSearches[indexPath.row]
+        let search = getSearch(from: pastSearches[indexPath.row])
         for property in [search.title, search.year, search.type?.rawValue] {
             if let property = property {
                 cell.textLabel?.text?.append("\(property) ")
@@ -47,7 +47,20 @@ class HistoryTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let search = pastSearches[indexPath.row]
-        delegate?.search(for: search)
+        delegate?.search(for: getSearch(from: search))
+    }
+
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete) {
+            let search = pastSearches[indexPath.row]
+            deletePastSearch(search)
+            pastSearches.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
     }
 
     // MARK: - Helper
@@ -62,16 +75,31 @@ class HistoryTableViewController: UITableViewController {
         return search
     }
 
-    func getPastSearches() -> [Search]? {
+    func deletePastSearch(_ pastSearch: NSManagedObject) {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        let context = appDelegate.persistentContainer.viewContext
+        context.delete(pastSearch)
+        do {
+            try context.save()
+        } catch {
+            present(UIAlertController(
+                error: error,
+                message: "Couldn't delete.",
+                dismissCompletion: nil
+            ), animated: true, completion: nil)
+        }
+    }
+
+    func getPastSearches() -> [NSManagedObject]? {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return nil
         }
         let context = appDelegate.persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "PastSearch")
         guard let data = try? context.fetch(fetchRequest) else { return nil }
-        return data.map({ (object) -> Search in
-            getSearch(from: object)
-        })
+        return data
     }
 
 }
