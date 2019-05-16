@@ -14,8 +14,8 @@ class HistoryTableViewController: UITableViewController {
     var pastSearches: [NSManagedObject] = []
     weak var delegate: SearchDelegate?
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         if let searches = getPastSearches() {
             pastSearches = searches
             tableView.reloadData()
@@ -35,6 +35,7 @@ class HistoryTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ReuseIDs.searchHistoryCell, for: indexPath)
         let search = getSearch(from: pastSearches[indexPath.row])
+        cell.textLabel?.text = ""
         for property in [search.title, search.year, search.type?.rawValue] {
             if let property = property {
                 cell.textLabel?.text?.append("\(property) ")
@@ -98,8 +99,17 @@ class HistoryTableViewController: UITableViewController {
         }
         let context = appDelegate.persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "PastSearch")
-        guard let data = try? context.fetch(fetchRequest) else { return nil }
-        return data
+        do {
+            let data = try context.fetch(fetchRequest)
+            return data
+        } catch {
+            present(UIAlertController(
+                error: error,
+                message: "Couldn't load history.",
+                dismissCompletion: nil
+            ), animated: true, completion: nil)
+            return nil
+        }
     }
 
 }

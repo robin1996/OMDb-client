@@ -12,7 +12,7 @@ enum APIError: Error {
     case noData
 }
 
-enum APIService {
+class APIService {
 
     private enum ParamKey: String {
         case search = "s"
