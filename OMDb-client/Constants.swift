@@ -14,8 +14,13 @@ enum Storyboards {
 
 enum ReuseIDs {
     static let movieCell = "MovieCell"
+    static let searchHistoryCell = "SearchHistoryCell"
 }
 
 enum XIBNames {
     static let movieCell = "MovieCell"
+}
+
+enum Segues {
+    static let showHistory = "ShowHistory"
 }

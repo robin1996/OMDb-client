@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Search View Controller-->
+        <!--New Search-->
         <scene sceneID="Wyg-Ws-Z6U">
             <objects>
                 <viewController id="ac9-Gd-aE5" customClass="SearchViewController" customModule="OMDb_client" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="UEr-32-0o2">
-                                <rect key="frame" x="16" y="60" width="382" height="152"/>
+                                <rect key="frame" x="16" y="68" width="382" height="152"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="av2-bl-ns2">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="40"/>
@@ -51,7 +51,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTA-io-EQl">
-                                <rect key="frame" x="157" y="232" width="100" height="50"/>
+                                <rect key="frame" x="157" y="240" width="100" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="691-ZE-Kr0"/>
                                     <constraint firstAttribute="width" constant="100" id="GhB-8g-bMN"/>
@@ -66,13 +66,20 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="UEr-32-0o2" firstAttribute="leading" secondItem="cG9-LO-NaW" secondAttribute="leading" constant="16" id="06d-J4-HMJ"/>
-                            <constraint firstItem="UEr-32-0o2" firstAttribute="top" secondItem="cG9-LO-NaW" secondAttribute="top" constant="16" id="P3r-Jc-a2C"/>
+                            <constraint firstItem="UEr-32-0o2" firstAttribute="top" secondItem="cG9-LO-NaW" secondAttribute="top" constant="24" id="P3r-Jc-a2C"/>
                             <constraint firstItem="bTA-io-EQl" firstAttribute="top" secondItem="UEr-32-0o2" secondAttribute="bottom" constant="20" id="Pol-K4-lZA"/>
                             <constraint firstItem="bTA-io-EQl" firstAttribute="centerX" secondItem="cG9-LO-NaW" secondAttribute="centerX" id="SKT-nZ-B0u"/>
                             <constraint firstItem="cG9-LO-NaW" firstAttribute="trailing" secondItem="UEr-32-0o2" secondAttribute="trailing" constant="16" id="a8D-ks-FGV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cG9-LO-NaW"/>
                     </view>
+                    <navigationItem key="navigationItem" title="New Search" id="xH2-CE-QJs">
+                        <barButtonItem key="rightBarButtonItem" image="history_icon" id="rRn-Qi-TVa">
+                            <connections>
+                                <segue destination="MvJ-Ne-kM5" kind="show" identifier="ShowHistory" id="T2H-UC-N7q"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchButton" destination="bTA-io-EQl" id="Onv-mb-185"/>
                         <outlet property="titleField" destination="av2-bl-ns2" id="XKM-Z6-whK"/>
@@ -82,7 +89,47 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5jh-JH-moA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-244.92753623188409" y="1.3392857142857142"/>
+            <point key="canvasLocation" x="665.21739130434787" y="1.3392857142857142"/>
+        </scene>
+        <!--History-->
+        <scene sceneID="QCp-wf-eOG">
+            <objects>
+                <tableViewController title="History" id="MvJ-Ne-kM5" customClass="HistoryTableViewController" customModule="OMDb_client" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="HR2-xi-Zlc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchHistoryCell" textLabel="zgs-BX-aA4" rowHeight="60" style="IBUITableViewCellStyleDefault" id="JGY-G0-bFo">
+                                <rect key="frame" x="0.0" y="28" width="414" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JGY-G0-bFo" id="0lK-A0-STp">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="59.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zgs-BX-aA4">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="MvJ-Ne-kM5" id="Zbg-6h-o5I"/>
+                            <outlet property="delegate" destination="MvJ-Ne-kM5" id="AR7-h8-h1M"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pwA-Xo-2p8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1555.072463768116" y="0.6696428571428571"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="history_icon" width="24" height="24"/>
+    </resources>
 </document>

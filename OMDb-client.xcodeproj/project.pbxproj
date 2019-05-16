@@ -18,7 +18,7 @@
 		4B62DF27228C6FE200CD8380 /* OMDb_clientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62DF26228C6FE200CD8380 /* OMDb_clientUITests.swift */; };
 		4B62DF39228C744400CD8380 /* MainAppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62DF38228C744400CD8380 /* MainAppButton.swift */; };
 		4B62DF3B228C7F1200CD8380 /* MovieListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62DF3A228C7F1200CD8380 /* MovieListTableViewController.swift */; };
-		4B62DF3E228C7F7B00CD8380 /* ResultsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62DF3D228C7F7B00CD8380 /* ResultsNavigationController.swift */; };
+		4B62DF3E228C7F7B00CD8380 /* SearchNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62DF3D228C7F7B00CD8380 /* SearchNavigationController.swift */; };
 		4B62DF40228C823C00CD8380 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B62DF3F228C823C00CD8380 /* Search.storyboard */; };
 		4B62DF42228C839D00CD8380 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62DF41228C839D00CD8380 /* Constants.swift */; };
 		4B62DF44228C8D3F00CD8380 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62DF43228C8D3F00CD8380 /* APIService.swift */; };
@@ -28,6 +28,7 @@
 		4B62DF4E228CAB2600CD8380 /* PosterOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62DF4D228CAB2600CD8380 /* PosterOperations.swift */; };
 		4B62DF51228CB1F500CD8380 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62DF50228CB1F500CD8380 /* SearchViewController.swift */; };
 		4B62DF53228D523700CD8380 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62DF52228D523700CD8380 /* Search.swift */; };
+		4B62DF56228D788E00CD8380 /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62DF55228D788E00CD8380 /* HistoryTableViewController.swift */; };
 		81963C038C99156C83E66974 /* Pods_OMDb_client.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD03ACC9C726363C3B9B3020 /* Pods_OMDb_client.framework */; };
 		B8A538AA7CD0FCEA229BFD9A /* Pods_OMDb_clientUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BED809D6F09F73B44E8B189E /* Pods_OMDb_clientUITests.framework */; };
 /* End PBXBuildFile section */
@@ -69,7 +70,7 @@
 		4B62DF28228C6FE200CD8380 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B62DF38228C744400CD8380 /* MainAppButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppButton.swift; sourceTree = "<group>"; };
 		4B62DF3A228C7F1200CD8380 /* MovieListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListTableViewController.swift; sourceTree = "<group>"; };
-		4B62DF3D228C7F7B00CD8380 /* ResultsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsNavigationController.swift; sourceTree = "<group>"; };
+		4B62DF3D228C7F7B00CD8380 /* SearchNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNavigationController.swift; sourceTree = "<group>"; };
 		4B62DF3F228C823C00CD8380 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		4B62DF41228C839D00CD8380 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4B62DF43228C8D3F00CD8380 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
@@ -79,6 +80,7 @@
 		4B62DF4D228CAB2600CD8380 /* PosterOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterOperations.swift; sourceTree = "<group>"; };
 		4B62DF50228CB1F500CD8380 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		4B62DF52228D523700CD8380 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		4B62DF55228D788E00CD8380 /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
 		5F87E817406A02BFDD14E9FB /* Pods-OMDb-clientUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMDb-clientUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OMDb-clientUITests/Pods-OMDb-clientUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		936D58A14ED9083C1F22469E /* Pods-OMDb-client.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMDb-client.release.xcconfig"; path = "Pods/Target Support Files/Pods-OMDb-client/Pods-OMDb-client.release.xcconfig"; sourceTree = "<group>"; };
 		BED809D6F09F73B44E8B189E /* Pods_OMDb_clientUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OMDb_clientUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -219,7 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				4B62DF3A228C7F1200CD8380 /* MovieListTableViewController.swift */,
-				4B62DF3D228C7F7B00CD8380 /* ResultsNavigationController.swift */,
+				4B62DF3D228C7F7B00CD8380 /* SearchNavigationController.swift */,
 			);
 			path = Results;
 			sourceTree = "<group>";
@@ -246,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				4B62DF50228CB1F500CD8380 /* SearchViewController.swift */,
+				4B62DF55228D788E00CD8380 /* HistoryTableViewController.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -491,7 +494,8 @@
 				4B62DF53228D523700CD8380 /* Search.swift in Sources */,
 				4B62DF39228C744400CD8380 /* MainAppButton.swift in Sources */,
 				4B62DF0C228C6FE100CD8380 /* OMDb_client.xcdatamodeld in Sources */,
-				4B62DF3E228C7F7B00CD8380 /* ResultsNavigationController.swift in Sources */,
+				4B62DF3E228C7F7B00CD8380 /* SearchNavigationController.swift in Sources */,
+				4B62DF56228D788E00CD8380 /* HistoryTableViewController.swift in Sources */,
 				4B62DF06228C6FE100CD8380 /* RootViewController.swift in Sources */,
 				4B62DF44228C8D3F00CD8380 /* APIService.swift in Sources */,
 				4B62DF42228C839D00CD8380 /* Constants.swift in Sources */,

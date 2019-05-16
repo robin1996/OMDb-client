@@ -22,9 +22,8 @@ class RootViewController: UIViewController {
     // MARK: - Members
 
     var mode: Mode = .results
-    weak var resultsNavigationController: ResultsNavigationController?
-    weak var searchViewController: UIViewController?
-    weak var searchDelegate: SearchDelegate?
+    weak var searchNavigationController: SearchNavigationController?
+    weak var resultsViewController: MovieListTableViewController?
 
     // MARK: Outlets
 
@@ -50,11 +49,9 @@ class RootViewController: UIViewController {
 
     func setupResults() {
         let vc = MovieListTableViewController()
-        let nc = ResultsNavigationController(rootViewController: vc)
-        addChild(nc)
-        nc.didMove(toParent: self)
-        resultsNavigationController = nc
-        searchDelegate = vc
+        addChild(vc)
+        vc.didMove(toParent: self)
+        resultsViewController = vc
     }
 
     func setupSearch() {
@@ -62,10 +59,11 @@ class RootViewController: UIViewController {
             .instantiateInitialViewController() as? SearchViewController else {
                 fatalError()
         }
-        addChild(vc)
-        vc.didMove(toParent: self)
+        let nc = SearchNavigationController(rootViewController: vc)
+        addChild(nc)
+        nc.didMove(toParent: self)
         vc.delegate = self
-        searchViewController = vc
+        searchNavigationController = nc
     }
 
     func setMode(to mode: Mode) {
@@ -74,13 +72,13 @@ class RootViewController: UIViewController {
         switch mode {
         case .results:
             setMainAppButton(to: .searchButton)
-            oldView = searchViewController?.view
-            newView = resultsNavigationController?.view
+            oldView = searchNavigationController?.view
+            newView = resultsViewController?.view
             self.mode = .results
         case .search:
             setMainAppButton(to: .exitButton)
-            oldView = resultsNavigationController?.view
-            newView = searchViewController?.view
+            oldView = resultsViewController?.view
+            newView = searchNavigationController?.view
             self.mode = .search
         }
         UIView.transition(with: contentView, duration: 0.3, options: .transitionCrossDissolve, animations: {
@@ -118,7 +116,7 @@ class RootViewController: UIViewController {
 extension RootViewController: SearchDelegate {
 
     func search(for search: Search) {
-        searchDelegate?.search(for: search)
+        resultsViewController?.search(for: search)
         setMode(to: .results)
     }
 

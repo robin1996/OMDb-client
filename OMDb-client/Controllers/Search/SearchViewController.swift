@@ -34,7 +34,9 @@ class SearchViewController: UIViewController {
     // MARK: - Actions
 
     @IBAction func searchButtonPress(_ sender: Any) {
-        delegate?.search(for: getSearch())
+        let search = getSearch()
+        saveSearch(search)
+        delegate?.search(for: search)
     }
 
     // MARK: - Helper
@@ -51,6 +53,30 @@ class SearchViewController: UIViewController {
         searchButton.layer.cornerRadius = 25
         searchButton.layer.borderWidth = 1
         searchButton.layer.borderColor = searchButton.tintColor.cgColor
+    }
+
+    func saveSearch(_ search: Search) {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        let context = appDelegate.persistentContainer.viewContext
+        let searchEntity = NSEntityDescription.entity(forEntityName: "PastSearch", in: context)!
+        let newSearch = NSManagedObject(entity: searchEntity, insertInto: context)
+        newSearch.setValue(search.title, forKeyPath: "title")
+        newSearch.setValue(search.year, forKeyPath: "year")
+        newSearch.setValue(search.type?.rawValue, forKeyPath: "type")
+        try? context.save()
+    }
+
+}
+
+// MARK: - Navigation
+extension SearchViewController {
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Segues.showHistory {
+            (segue.destination as! HistoryTableViewController).delegate = delegate
+        }
     }
 
 }
