@@ -29,6 +29,7 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         setupTypePicker()
         setupSearchButton()
+        yearField.delegate = self
     }
 
     // MARK: - Actions
@@ -115,6 +116,18 @@ extension SearchViewController: UIPickerViewDelegate {
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return Search.SearchType.allCases[row].rawValue
+    }
+
+}
+
+// MARK: - Year text field delegate
+extension SearchViewController: UITextFieldDelegate {
+
+    // Limit to 4 number characters
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        guard let newText = (textField.text as NSString?)?
+            .replacingCharacters(in: range, with: string) else { return false }
+        return (newText.count <= 4) && ((Int(newText) != nil) || newText.isEmpty)
     }
 
 }
