@@ -12,13 +12,11 @@ class MovieCell: UITableViewCell {
 
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var yearLabel: UILabel!
-    @IBOutlet var plotLabel: UILabel!
     @IBOutlet var posterImageView: UIImageView!
 
     func setupDescriptionFrom(_ item: OMDbItem) {
         titleLabel.text = item.title
         yearLabel.text = item.year
-        plotLabel.text = item.plot
     }
 
     func setupPosterFrom(_ image: UIImage?) {

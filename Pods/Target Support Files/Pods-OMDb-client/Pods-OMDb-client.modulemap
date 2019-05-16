@@ -1,0 +1,6 @@
+framework module Pods_OMDb_client {
+  umbrella header "Pods-OMDb-client-umbrella.h"
+
+  export *
+  module * { export * }
+}

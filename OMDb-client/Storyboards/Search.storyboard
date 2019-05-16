@@ -18,17 +18,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="av2-bl-ns2">
-                                <rect key="frame" x="20" y="74" width="374" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="lVk-4f-uho"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="UEr-32-0o2">
+                                <rect key="frame" x="16" y="60" width="382" height="152"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="av2-bl-ns2">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="lVk-4f-uho"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DH0-tv-GHe">
+                                        <rect key="frame" x="0.0" y="56" width="382" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="xj3-po-BeV"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bR0-N3-2qJ">
+                                        <rect key="frame" x="0.0" y="112" width="382" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="JlS-AT-vzo"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTA-io-EQl">
-                                <rect key="frame" x="157" y="134" width="100" height="50"/>
+                                <rect key="frame" x="157" y="232" width="100" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="691-ZE-Kr0"/>
                                     <constraint firstAttribute="width" constant="100" id="GhB-8g-bMN"/>
@@ -42,17 +65,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="cG9-LO-NaW" firstAttribute="trailing" secondItem="av2-bl-ns2" secondAttribute="trailing" constant="20" id="5Qs-bq-016"/>
+                            <constraint firstItem="UEr-32-0o2" firstAttribute="leading" secondItem="cG9-LO-NaW" secondAttribute="leading" constant="16" id="06d-J4-HMJ"/>
+                            <constraint firstItem="UEr-32-0o2" firstAttribute="top" secondItem="cG9-LO-NaW" secondAttribute="top" constant="16" id="P3r-Jc-a2C"/>
+                            <constraint firstItem="bTA-io-EQl" firstAttribute="top" secondItem="UEr-32-0o2" secondAttribute="bottom" constant="20" id="Pol-K4-lZA"/>
                             <constraint firstItem="bTA-io-EQl" firstAttribute="centerX" secondItem="cG9-LO-NaW" secondAttribute="centerX" id="SKT-nZ-B0u"/>
-                            <constraint firstItem="bTA-io-EQl" firstAttribute="top" secondItem="av2-bl-ns2" secondAttribute="bottom" constant="20" id="UH2-fz-cOo"/>
-                            <constraint firstItem="av2-bl-ns2" firstAttribute="top" secondItem="cG9-LO-NaW" secondAttribute="top" constant="30" id="flj-sh-GSy"/>
-                            <constraint firstItem="av2-bl-ns2" firstAttribute="leading" secondItem="cG9-LO-NaW" secondAttribute="leading" constant="20" id="xzc-96-Eia"/>
+                            <constraint firstItem="cG9-LO-NaW" firstAttribute="trailing" secondItem="UEr-32-0o2" secondAttribute="trailing" constant="16" id="a8D-ks-FGV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cG9-LO-NaW"/>
                     </view>
                     <connections>
                         <outlet property="searchButton" destination="bTA-io-EQl" id="Onv-mb-185"/>
                         <outlet property="titleField" destination="av2-bl-ns2" id="XKM-Z6-whK"/>
+                        <outlet property="typeField" destination="bR0-N3-2qJ" id="9qI-mL-H4T"/>
+                        <outlet property="yearField" destination="DH0-tv-GHe" id="92D-dv-PSu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5jh-JH-moA" userLabel="First Responder" sceneMemberID="firstResponder"/>

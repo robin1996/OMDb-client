@@ -7,22 +7,88 @@
 //
 
 import UIKit
+import CoreData
 
 class SearchViewController: UIViewController {
 
     // MARK: - Members
 
     weak var delegate: SearchDelegate?
+    var typePicker = UIPickerView()
 
     // MARK: Outlet
 
     @IBOutlet var searchButton: UIButton!
     @IBOutlet var titleField: UITextField!
+    @IBOutlet var yearField: UITextField!
+    @IBOutlet var typeField: UITextField!
+
+    // MARK: - Life cycle
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupTypePicker()
+        setupSearchButton()
+    }
 
     // MARK: - Actions
 
     @IBAction func searchButtonPress(_ sender: Any) {
-        delegate?.search(for: titleField.text ?? "")
+        delegate?.search(for: getSearch())
+    }
+
+    // MARK: - Helper
+
+    func getSearch() -> Search {
+        var search = Search()
+        if titleField.text != "" { search.title = titleField.text }
+        if yearField.text  != "" { search.year = yearField.text }
+        if let type = typeField.text, type != "" { search.type = Search.SearchType(rawValue: type) }
+        return search
+    }
+
+    func setupSearchButton() {
+        searchButton.layer.cornerRadius = 25
+        searchButton.layer.borderWidth = 1
+        searchButton.layer.borderColor = searchButton.tintColor.cgColor
+    }
+
+}
+
+// Search type picker
+extension SearchViewController {
+
+    private func setupTypePicker() {
+        typePicker.dataSource = self
+        typePicker.delegate = self
+        typeField.inputView = typePicker
+        typeField.addTarget(self, action: #selector(setType), for: .editingDidEnd)
+    }
+
+    @objc private func setType() {
+        let type = Search.SearchType.allCases[typePicker.selectedRow(inComponent: 0)]
+        let text = type == .any ? "" : type.rawValue
+        typeField.text = text
+    }
+
+}
+
+extension SearchViewController: UIPickerViewDataSource {
+
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return Search.SearchType.allCases.count
+    }
+
+}
+
+extension SearchViewController: UIPickerViewDelegate {
+
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return Search.SearchType.allCases[row].rawValue
     }
 
 }

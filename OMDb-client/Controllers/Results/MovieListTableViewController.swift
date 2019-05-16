@@ -87,8 +87,8 @@ extension MovieListTableViewController: UITableViewDataSourcePrefetching {
 
 extension MovieListTableViewController: SearchDelegate {
 
-    func search(for searchString: String) {
-        APIService.performSearch(searchString) { [weak self] (items, _) in
+    func search(for search: Search) {
+        APIService.performSearch(search) { [weak self] (items, _) in
             if let items = items {
                 self?.items = items
                 DispatchQueue.main.async {

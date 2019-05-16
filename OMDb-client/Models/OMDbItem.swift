@@ -17,12 +17,14 @@ struct OMDbSearch: Codable {
 }
 
 struct OMDbItem: Codable {
+    let id: String
     let title: String?
     let year: String?
     let poster: String?
     let plot: String?
 
     enum CodingKeys: String, CodingKey {
+        case id     = "imdbID"
         case title  = "Title"
         case year   = "Year"
         case poster = "Poster"

@@ -32,16 +32,26 @@ enum APIService {
         for param in params {
             urlString.append("&\(param.key.rawValue)=\(param.value)")
         }
-        // Always get full plot
-        urlString.append("&\(ParamKey.plot.rawValue)=full")
         return URL(string: urlString)!
     }
 
-    static func performSearch(_ searchString: String, completion: @escaping ([OMDbItem]?, Error?) -> Void) {
+    private static func url(_ search: Search) -> URL {
+        var params: [Param] = []
+        if let title = search.title {
+            params.append((.search, title))
+        }
+        if let year = search.year {
+            params.append((.year, year))
+        }
+        if let type = search.type {
+            params.append((.type, type.rawValue))
+        }
+        return url(params)
+    }
+
+    static func performSearch(_ search: Search, completion: @escaping ([OMDbItem]?, Error?) -> Void) {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        URLSession.shared.dataTask(with: url(
-            [(.search, searchString.replacingOccurrences(of: " ", with: ""))]
-        )) { (data, _, error) in
+        URLSession.shared.dataTask(with: url(search)) { (data, _, error) in
             DispatchQueue.main.async {
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false
             }

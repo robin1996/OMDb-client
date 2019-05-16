@@ -1,0 +1,6 @@
+framework module Pods_OMDb_clientUITests {
+  umbrella header "Pods-OMDb-clientUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

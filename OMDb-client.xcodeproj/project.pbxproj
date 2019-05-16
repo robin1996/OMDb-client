@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		410418AB7EAC5E449971EF69 /* Pods_OMDb_clientTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07047A5C2FA5A32BA8F5C7D9 /* Pods_OMDb_clientTests.framework */; };
 		4B62DF04228C6FE100CD8380 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62DF03228C6FE100CD8380 /* AppDelegate.swift */; };
 		4B62DF06228C6FE100CD8380 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62DF05228C6FE100CD8380 /* RootViewController.swift */; };
 		4B62DF09228C6FE100CD8380 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B62DF07228C6FE100CD8380 /* Main.storyboard */; };
@@ -26,6 +27,9 @@
 		4B62DF4B228CA28D00CD8380 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62DF4A228CA28D00CD8380 /* MovieCell.swift */; };
 		4B62DF4E228CAB2600CD8380 /* PosterOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62DF4D228CAB2600CD8380 /* PosterOperations.swift */; };
 		4B62DF51228CB1F500CD8380 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62DF50228CB1F500CD8380 /* SearchViewController.swift */; };
+		4B62DF53228D523700CD8380 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62DF52228D523700CD8380 /* Search.swift */; };
+		81963C038C99156C83E66974 /* Pods_OMDb_client.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD03ACC9C726363C3B9B3020 /* Pods_OMDb_client.framework */; };
+		B8A538AA7CD0FCEA229BFD9A /* Pods_OMDb_clientUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BED809D6F09F73B44E8B189E /* Pods_OMDb_clientUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +50,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07047A5C2FA5A32BA8F5C7D9 /* Pods_OMDb_clientTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OMDb_clientTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		442F88F226D3907686624C23 /* Pods-OMDb-clientUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMDb-clientUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OMDb-clientUITests/Pods-OMDb-clientUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4A1E7294BAB3BE9394D57D3F /* Pods-OMDb-clientTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMDb-clientTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OMDb-clientTests/Pods-OMDb-clientTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4B62DF00228C6FE100CD8380 /* OMDb-client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OMDb-client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B62DF03228C6FE100CD8380 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B62DF05228C6FE100CD8380 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +78,13 @@
 		4B62DF4A228CA28D00CD8380 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		4B62DF4D228CAB2600CD8380 /* PosterOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterOperations.swift; sourceTree = "<group>"; };
 		4B62DF50228CB1F500CD8380 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		4B62DF52228D523700CD8380 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		5F87E817406A02BFDD14E9FB /* Pods-OMDb-clientUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMDb-clientUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OMDb-clientUITests/Pods-OMDb-clientUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		936D58A14ED9083C1F22469E /* Pods-OMDb-client.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMDb-client.release.xcconfig"; path = "Pods/Target Support Files/Pods-OMDb-client/Pods-OMDb-client.release.xcconfig"; sourceTree = "<group>"; };
+		BED809D6F09F73B44E8B189E /* Pods_OMDb_clientUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OMDb_clientUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF9B070A5F8DD9A72335685C /* Pods-OMDb-client.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMDb-client.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OMDb-client/Pods-OMDb-client.debug.xcconfig"; sourceTree = "<group>"; };
+		DD03ACC9C726363C3B9B3020 /* Pods_OMDb_client.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OMDb_client.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA13A7C27891D533003DF2F1 /* Pods-OMDb-clientTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMDb-clientTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OMDb-clientTests/Pods-OMDb-clientTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81963C038C99156C83E66974 /* Pods_OMDb_client.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				410418AB7EAC5E449971EF69 /* Pods_OMDb_clientTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,12 +108,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8A538AA7CD0FCEA229BFD9A /* Pods_OMDb_clientUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44D6C6000812AAB787AB29EA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CF9B070A5F8DD9A72335685C /* Pods-OMDb-client.debug.xcconfig */,
+				936D58A14ED9083C1F22469E /* Pods-OMDb-client.release.xcconfig */,
+				4A1E7294BAB3BE9394D57D3F /* Pods-OMDb-clientTests.debug.xcconfig */,
+				EA13A7C27891D533003DF2F1 /* Pods-OMDb-clientTests.release.xcconfig */,
+				5F87E817406A02BFDD14E9FB /* Pods-OMDb-clientUITests.debug.xcconfig */,
+				442F88F226D3907686624C23 /* Pods-OMDb-clientUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		4B62DEF7228C6FE100CD8380 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +135,8 @@
 				4B62DF1A228C6FE200CD8380 /* OMDb-clientTests */,
 				4B62DF25228C6FE200CD8380 /* OMDb-clientUITests */,
 				4B62DF01228C6FE100CD8380 /* Products */,
+				44D6C6000812AAB787AB29EA /* Pods */,
+				7C0B26C0AA3275C8E50FCAAB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -196,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				4B62DF46228C9C5100CD8380 /* OMDbItem.swift */,
+				4B62DF52228D523700CD8380 /* Search.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -217,6 +250,16 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
+		7C0B26C0AA3275C8E50FCAAB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD03ACC9C726363C3B9B3020 /* Pods_OMDb_client.framework */,
+				07047A5C2FA5A32BA8F5C7D9 /* Pods_OMDb_clientTests.framework */,
+				BED809D6F09F73B44E8B189E /* Pods_OMDb_clientUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -224,9 +267,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4B62DF2B228C6FE200CD8380 /* Build configuration list for PBXNativeTarget "OMDb-client" */;
 			buildPhases = (
+				735F9121CB574265F6FDBB17 /* [CP] Check Pods Manifest.lock */,
 				4B62DEFC228C6FE100CD8380 /* Sources */,
 				4B62DEFD228C6FE100CD8380 /* Frameworks */,
 				4B62DEFE228C6FE100CD8380 /* Resources */,
+				0AFF3CD5DEB2C1FBFF9CBF56 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -241,6 +286,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4B62DF2E228C6FE200CD8380 /* Build configuration list for PBXNativeTarget "OMDb-clientTests" */;
 			buildPhases = (
+				8C17D654576A6084C356020F /* [CP] Check Pods Manifest.lock */,
 				4B62DF13228C6FE200CD8380 /* Sources */,
 				4B62DF14228C6FE200CD8380 /* Frameworks */,
 				4B62DF15228C6FE200CD8380 /* Resources */,
@@ -259,6 +305,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4B62DF31228C6FE200CD8380 /* Build configuration list for PBXNativeTarget "OMDb-clientUITests" */;
 			buildPhases = (
+				4F7565D5236C6EE435051C0F /* [CP] Check Pods Manifest.lock */,
 				4B62DF1E228C6FE200CD8380 /* Sources */,
 				4B62DF1F228C6FE200CD8380 /* Frameworks */,
 				4B62DF20228C6FE200CD8380 /* Resources */,
@@ -345,11 +392,103 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0AFF3CD5DEB2C1FBFF9CBF56 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OMDb-client/Pods-OMDb-client-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OMDb-client/Pods-OMDb-client-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F7565D5236C6EE435051C0F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OMDb-clientUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		735F9121CB574265F6FDBB17 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OMDb-client-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C17D654576A6084C356020F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OMDb-clientTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4B62DEFC228C6FE100CD8380 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B62DF53228D523700CD8380 /* Search.swift in Sources */,
 				4B62DF39228C744400CD8380 /* MainAppButton.swift in Sources */,
 				4B62DF0C228C6FE100CD8380 /* OMDb_client.xcdatamodeld in Sources */,
 				4B62DF3E228C7F7B00CD8380 /* ResultsNavigationController.swift in Sources */,
@@ -534,6 +673,7 @@
 		};
 		4B62DF2C228C6FE200CD8380 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF9B070A5F8DD9A72335685C /* Pods-OMDb-client.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -552,6 +692,7 @@
 		};
 		4B62DF2D228C6FE200CD8380 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 936D58A14ED9083C1F22469E /* Pods-OMDb-client.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -570,6 +711,7 @@
 		};
 		4B62DF2F228C6FE200CD8380 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A1E7294BAB3BE9394D57D3F /* Pods-OMDb-clientTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -591,6 +733,7 @@
 		};
 		4B62DF30228C6FE200CD8380 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA13A7C27891D533003DF2F1 /* Pods-OMDb-clientTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -612,6 +755,7 @@
 		};
 		4B62DF32228C6FE200CD8380 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F87E817406A02BFDD14E9FB /* Pods-OMDb-clientUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -632,6 +776,7 @@
 		};
 		4B62DF33228C6FE200CD8380 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 442F88F226D3907686624C23 /* Pods-OMDb-clientUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -9,7 +9,7 @@
 import UIKit
 
 protocol SearchDelegate: AnyObject {
-    func search(for searchString: String)
+    func search(for searchString: Search)
 }
 
 class RootViewController: UIViewController {
@@ -117,8 +117,8 @@ class RootViewController: UIViewController {
 
 extension RootViewController: SearchDelegate {
 
-    func search(for searchString: String) {
-        searchDelegate?.search(for: searchString)
+    func search(for search: Search) {
+        searchDelegate?.search(for: search)
         setMode(to: .results)
     }
 
