@@ -33,6 +33,7 @@
 		4B62DF5C228E210900CD8380 /* APIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62DF5B228E210900CD8380 /* APIServiceTests.swift */; };
 		4B62DF5F228E259A00CD8380 /* SearchViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62DF5E228E259A00CD8380 /* SearchViewControllerTests.swift */; };
 		4B62DF61228E2C9600CD8380 /* HistoryTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62DF60228E2C9600CD8380 /* HistoryTableViewControllerTests.swift */; };
+		4B62DF63228E2FB000CD8380 /* MovieListTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62DF62228E2FB000CD8380 /* MovieListTableViewControllerTests.swift */; };
 		81963C038C99156C83E66974 /* Pods_OMDb_client.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD03ACC9C726363C3B9B3020 /* Pods_OMDb_client.framework */; };
 		B8A538AA7CD0FCEA229BFD9A /* Pods_OMDb_clientUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BED809D6F09F73B44E8B189E /* Pods_OMDb_clientUITests.framework */; };
 /* End PBXBuildFile section */
@@ -89,6 +90,7 @@
 		4B62DF5B228E210900CD8380 /* APIServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceTests.swift; sourceTree = "<group>"; };
 		4B62DF5E228E259A00CD8380 /* SearchViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewControllerTests.swift; sourceTree = "<group>"; };
 		4B62DF60228E2C9600CD8380 /* HistoryTableViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewControllerTests.swift; sourceTree = "<group>"; };
+		4B62DF62228E2FB000CD8380 /* MovieListTableViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListTableViewControllerTests.swift; sourceTree = "<group>"; };
 		5F87E817406A02BFDD14E9FB /* Pods-OMDb-clientUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMDb-clientUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OMDb-clientUITests/Pods-OMDb-clientUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		936D58A14ED9083C1F22469E /* Pods-OMDb-client.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMDb-client.release.xcconfig"; path = "Pods/Target Support Files/Pods-OMDb-client/Pods-OMDb-client.release.xcconfig"; sourceTree = "<group>"; };
 		BED809D6F09F73B44E8B189E /* Pods_OMDb_clientUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OMDb_clientUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -285,6 +287,7 @@
 			children = (
 				4B62DF5E228E259A00CD8380 /* SearchViewControllerTests.swift */,
 				4B62DF60228E2C9600CD8380 /* HistoryTableViewControllerTests.swift */,
+				4B62DF62228E2FB000CD8380 /* MovieListTableViewControllerTests.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -551,6 +554,7 @@
 			files = (
 				4B62DF61228E2C9600CD8380 /* HistoryTableViewControllerTests.swift in Sources */,
 				4B62DF5C228E210900CD8380 /* APIServiceTests.swift in Sources */,
+				4B62DF63228E2FB000CD8380 /* MovieListTableViewControllerTests.swift in Sources */,
 				4B62DF1C228C6FE200CD8380 /* OMDb_clientTests.swift in Sources */,
 				4B62DF5F228E259A00CD8380 /* SearchViewControllerTests.swift in Sources */,
 			);
